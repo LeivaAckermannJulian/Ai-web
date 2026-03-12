@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functional 5-Module Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Functional Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showModule('home')">Home</a></li>
+            <li><a href="#" onclick="showModule('about')">About</a></li>
+            <li><a href="#" onclick="showModule('gallery')">Gallery</a></li>
+            <li><a href="#" onclick="showModule('subtract')">Subtract</a></li>
+            <li><a href="#" onclick="showModule('calculator')">Add</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Home Module -->
+    <section id="home" class="module">
+        <h2>Home</h2>
+        <p>Welcome to my fully functional website! Use the navigation above to explore modules.</p>
+        <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+    </section>
+
+    <!-- About Module -->
+    <section id="about" class="module" style="display:none;">
+        <h2>About</h2>
+        <p>This website demonstrates 5 modules with real functionality: Home, About, Gallery, Subtract, and Add Calculator.</p>
+    </section>
+
+    <!-- Gallery Module -->
+<section id="gallery" class="module" style="display:none;">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <img src="https://picsum.photos/id/1015/300/200" alt="Image 1" onclick="enlargeImage(this)">
+        <img src="https://picsum.photos/id/1025/300/200" alt="Image 2" onclick="enlargeImage(this)">
+        <img src="https://picsum.photos/id/1035/300/200" alt="Image 3" onclick="enlargeImage(this)">
+    </div>
+    <div id="enlargedContainer" style="display:none;">
+        <span onclick="closeImage()" style="cursor:pointer; color:white; font-size:20px; margin-bottom:10px;">[Close]</span>
+        <img id="enlargedImage" src="">
+    </div>
+</section>
+
+
+
+    <!-- Subtract Module -->
+    <section id="subtract" class="module" style="display:none;">
+        <h2>Subtract Calculator</h2>
+        <input type="number" id="sub1" placeholder="Number 1">
+        <input type="number" id="sub2" placeholder="Number 2">
+        <button onclick="subtract()">Subtract</button>
+        <p id="subResult"></p>
+    </section>
+
+    <!-- Add Calculator Module -->
+    <section id="calculator" class="module" style="display:none;">
+        <h2>Add Calculator</h2>
+        <input type="number" id="num1" placeholder="Number 1">
+        <input type="number" id="num2" placeholder="Number 2">
+        <button onclick="calculate()">Add Numbers</button>
+        <p id="calcResult"></p>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
